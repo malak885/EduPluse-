@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --navy: #101D35;
+    --blue: #183653;
+    --teal: #20B9A5;
+    --gold: #E8B96A;
+    --light: #F3F6FA;
+    --white: #FFFFFF;
+    --text: #24344D;
+    --muted: #77869A;
+    --border: #E5EAF0;
+}
+
+/* Main Application */
+.stApp {
+    background-color: var(--light);
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+}
+
+/* Main Content */
+.main .block-container {
+    padding: 2.5rem 3rem 3rem;
+    max-width: 1450px;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--navy);
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+section[data-testid="stSidebar"] * {
+    color: var(--white);
+}
+
+section[data-testid="stSidebar"] .stRadio label {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+}
+
+section[data-testid="stSidebar"] .stRadio label:hover {
+    background-color: rgba(32,185,165,0.14);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: var(--navy) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: 2.2rem !important;
+}
+
+h2 {
+    font-size: 1.55rem !important;
+}
+
+h3 {
+    font-size: 1.15rem !important;
+}
+
+/* Text */
+p, label, .stMarkdown {
+    color: var(--text);
+}
+
+/* Buttons */
+.stButton > button,
+.stFormSubmitButton > button {
+    background-color: var(--teal);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    padding: 0.55rem 1.4rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    transform: translateY(-2px);
+}
+
+/* Inputs */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input,
+.stTextArea textarea {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--text);
+}
+
+/* Select Boxes */
+.stSelectbox div[data-baseweb="select"],
+.stMultiSelect div[data-baseweb="select"] {
+    background-color: var(--white);
+    border-radius: 9px;
+}
+
+.stSelectbox div[data-baseweb="select"] > div,
+.stMultiSelect div[data-baseweb="select"] > div {
+    background-color: var(--white);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+div[data-baseweb="popover"],
+div[data-baseweb="menu"] {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+ul[data-testid="stSelectboxVirtualDropdown"] {
+    background-color: var(--white);
+}
+
+div[data-baseweb="menu"] li {
+    background-color: var(--white);
+    color: var(--text);
+}
+
+div[data-baseweb="menu"] li:hover {
+    background-color: var(--light);
+    color: var(--navy);
+}
+
+/* Focus States */
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stTextArea textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 1px var(--teal);
+}
+
+/* Metrics Cards */
+[data-testid="stMetric"] {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 3px 12px rgba(16,29,53,0.04);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+/* Containers and Cards */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+/* Radio Buttons and Checkboxes */
+.stRadio label,
+.stCheckbox label {
+    color: var(--text);
+}
+
+/* Dividers */
+hr {
+    border-color: var(--border);
+}
+
+/* Progress Bar */
+.stProgress > div > div > div {
+    background-color: var(--teal);
+}
+
+/* Alerts */
+div[data-testid="stAlert"] {
+    border-radius: 10px;
+}
+
+/* Dataframes */
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Hide Streamlit Branding */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
